@@ -1,0 +1,178 @@
+:root {
+  --sabzirang: #f06717;
+  --kulrang: #e7eff2;
+  --kichik-radius: 8px;
+  --katta-radius: 20px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+header,
+section,
+footer {
+  width: min(100% - 16px, 1000px);
+  margin-inline: auto;
+}
+
+p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 40px;
+}
+
+.logo {
+  background-color: var(--sabzirang);
+  color: white;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: var(--kulrang);
+  border: 0;
+  border-radius: var(--kichik-radius);
+  padding: 16px 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 500ms;
+  transition-property: background-color, color;
+}
+
+.btn:hover {
+  background-color: #222;
+  color: white;
+}
+
+.btn.asosiy {
+  background-color: var(--sabzirang);
+  color: white;
+}
+
+.btn:active {
+  scale: 0.9;
+}
+
+/* Birinchi guruh */
+.birinchi-guruh {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-block: 32px;
+}
+
+.birinchi-guruh div:nth-child(1) {
+  align-self: center;
+  display: grid;
+  gap: 8px;
+}
+
+.birinchi-guruh div:nth-child(2) img {
+  width: 100%;
+  /* kvadrat qilish uchun */
+  aspect-ratio: 1 / 1;
+
+  /* suratni tuzatish uchun */
+  object-fit: cover;
+  border-radius: var(--katta-radius);
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-block: 0;
+}
+
+.yonma-yon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Ikkinchi guruh */
+.ikkinchi-guruh {
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.ikkinchi-guruh div:nth-child(1) img {
+  border-radius: var(--katta-radius);
+  height: 100%;
+  object-fit: cover;
+}
+
+.ikkinchi-guruh div:nth-child(2) img {
+  border-radius: var(--katta-radius);
+  width: 100%;
+  aspect-ratio: 14 / 16;
+  object-fit: cover;
+}
+
+.ikkinchi-guruh div:nth-child(3) {
+  align-self: center;
+  padding-left: 100px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Uchinchi guruh */
+.uchinchi-guruh {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin-block: 150px;
+}
+
+.icon {
+  background-color: var(--sabzirang);
+  border-radius: var(--kichik-radius);
+  padding: 16px;
+  width: fit-content;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.uchinchi-guruh p {
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+/* Suratga orqa fon qo'shish */
+.sabzirang-orqa-surat {
+  background-color: var(--sabzirang);
+  border-radius: var(--katta-radius);
+}
+
+.sabzirang-orqa-surat img {
+  mix-blend-mode: multiply;
+}
